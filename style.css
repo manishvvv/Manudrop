@@ -1,0 +1,192 @@
+:root {
+    --primary-color: #4a90e2; /* A nice blue */
+    --secondary-color: #50e3c2; /* A greenish accent */
+    --background-color: #f4f7f6; /* Light grey background */
+    --text-color: #333;
+    --card-background: #ffffff;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 20px 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    margin: 0 0 0 15px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover; /* Ensures the image covers the area nicely */
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    flex-grow: 1; /* Pushes footer down */
+}
+
+.step {
+    display: none; /* Hide all steps initially */
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.step.active {
+    display: block; /* Show the active step */
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #3a7bc8; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-success {
+    background-color: #28a745; /* Green for success */
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+#quiz-form label {
+    display: block;
+    text-align: left;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 80%;
+    transition: background-color 0.2s ease;
+}
+#quiz-form label:hover {
+    background-color: #f0f0f0;
+}
+
+#quiz-form input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #dc3545; /* Red for errors */
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* Loader animation */
+.loader {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid var(--primary-color); /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fade-in animation for steps */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.prank-reveal h2 {
+    color: #e91e63; /* A fun pink/purple */
+    font-size: 2.5em;
+}
+
+.prank-reveal p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.85em;
+    color: #777;
+    background-color: #e9ecef;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.5em;
+    }
+    .container {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+    #quiz-form label {
+        max-width: 95%;
+    }
+}

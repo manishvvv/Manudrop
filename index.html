@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airdrop by Manu - $10 Giveaway!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <img src="your-image.jpg" alt="Manu" class="profile-pic">  <!-- !!! REPLACE 'your-image.jpg' with the actual path to your image !!! -->
+        <h1>Airdrop by Manu - Giveaway Round</h1>
+    </header>
+
+    <main class="container">
+
+        <!-- Step 1: Introduction -->
+        <section id="step-intro" class="step active">
+            <h2>Claim Your $10 USDT Airdrop!</h2>
+            <p>To celebrate... well, something special... I'm giving away $10 USDT to the first 1000 participants!</p>
+            <p>Complete one simple task below to verify your eligibility.</p>
+            <button id="start-btn" class="btn">Start Verification</button>
+        </section>
+
+        <!-- Step 2: The Task (Quiz) -->
+        <section id="step-task" class="step">
+            <h2>Verification Task: Quick Quiz</h2>
+            <p>Answer this simple question to proceed:</p>
+            <form id="quiz-form">
+                <p><strong>What is the primary benefit of decentralized finance (DeFi)?</strong></p>
+                <label>
+                    <input type="radio" name="quiz" value="a"> Increased Transparency & Accessibility
+                </label><br>
+                <label>
+                    <input type="radio" name="quiz" value="b"> Guaranteed High Returns
+                </label><br>
+                <label>
+                    <input type="radio" name="quiz" value="c"> Making Manu Smile on April 1st
+                </label><br>
+                <label>
+                    <input type="radio" name="quiz" value="d"> Central Bank Control
+                </label><br>
+                <p id="quiz-error" class="error-message" style="display: none;">Please select an answer!</p>
+                <button type="submit" id="submit-quiz-btn" class="btn">Submit Answer</button>
+            </form>
+        </section>
+
+        <!-- Step 3: Fake Verification -->
+        <section id="step-verifying" class="step">
+            <h2>Verifying Eligibility...</h2>
+            <div class="loader"></div>
+            <p id="verification-status">Checking your answer against the blockchain ledger... please wait.</p>
+            <p><em>(This totally isn't just a timer...)</em></p>
+        </section>
+
+        <!-- Step 4: Final "Claim" -->
+        <section id="step-claim" class="step">
+            <h2>Verification Complete!</h2>
+            <p>Congratulations! You've successfully passed the verification stage.</p>
+            <p>Your $10 USDT reward is ready to be claimed.</p>
+            <button id="claim-btn" class="btn btn-success">Claim My $10 Reward Now!</button>
+        </section>
+
+        <!-- Step 5: The Reveal! -->
+        <section id="step-reveal" class="step prank-reveal">
+            <h2>🎉 APRIL FOOLS! 🎉</h2>
+            <p>Gotcha! 😉</p>
+            <img src="https://media.giphy.com/media/ltIFdjNAasOwVvKhvx/giphy.gif" alt="Funny Prank GIF" style="max-width: 200px; margin: 15px 0; border-radius: 8px;">
+            <p>Did you really think claiming $10 was *that* easy? Especially today?</p>
+            <p>Don't worry, no wallets were connected, no data was stored, and no blockchain was harmed in the making of this prank.</p>
+            <p>Hope this brought a smile to your face! Wishing you a fun April Fool's Day!</p>
+            <p>- Manu</p>
+            <button onclick="window.location.reload()" class="btn">Try Again? (Hehe)</button>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Manu's Totally Legit Airdrops Inc. (Just kidding!)</p>
+        <p>This website is for entertainment purposes only.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
